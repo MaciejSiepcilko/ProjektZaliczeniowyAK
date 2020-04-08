@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  baza:
+    image: ghusta/postgres-world-db:2.4
+  demo-con2:
+    build: .
+    depends_on:
+      - baza
+    ports:
+      - 8085:8080
+
+
+# Przydatne komendy:
+# docker-compose up
+# docker-compose build
